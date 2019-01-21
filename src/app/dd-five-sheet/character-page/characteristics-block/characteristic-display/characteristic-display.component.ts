@@ -7,12 +7,18 @@ import { Characteristic } from 'src/app/dd-five-sheet/shared-objects/characteris
 })
 export class CharacteristicDisplayComponent implements OnInit {
 
+  displayValue: Number;
   @Input() characteristic: Characteristic;
 
 
   constructor() { }
 
   ngOnInit() {
+    this.displayValue = this.characteristic.getValue();
   }
 
+  onChange (event) {
+    let value =parseInt(event.target.value);
+    this.characteristic.setValue(value)
+  }
 }

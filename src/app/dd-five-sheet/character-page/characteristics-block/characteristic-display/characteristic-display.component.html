@@ -1,1 +1,1 @@
-<p>{{characteristic.key}}{{characteristic.value}}{{characteristic.getBonusAsString()}}</p>
+<span>{{characteristic.key | uppercase}}</span> <input [value]="characteristic.getValue()" (keyup)="onChange($event)" /> <span>{{characteristic.getBonusAsString()}}</span>
