@@ -11,14 +11,14 @@ export class Characteristic {
             // using setValue allow to make verifications
             this.setValue(inputValue);
         } else {
-            // default value is correct so no need for verifications 
+            // default value is correct so no need for verifications
             this.value = 10;
         }
         this.calculateChracteristicsBonus();
     }
 
-    calculateChracteristicsBonus(): void{
-        this.bonus = Math.floor((this.value - 10) / 2)
+    calculateChracteristicsBonus(): void {
+        this.bonus = Math.floor((this.value - 10) / 2);
     }
 
     getKey (): string {
@@ -29,7 +29,7 @@ export class Characteristic {
         if (inputValue <= 30 && inputValue >= 0) {
             this.value = inputValue;
         } else {
-            if (!this.value) {
+            if (this.value === undefined) {
                 this.value = 10;
             }
         }
@@ -44,13 +44,13 @@ export class Characteristic {
         return this.bonus;
     }
 
-    getBonusAsString ():string {
+    getBonusAsString (): string {
         if (this.bonus > 0) {
             return '+' + this.bonus;
         } else if (this.bonus) {
-            return this.bonus.toString()
+            return this.bonus.toString();
         } else {
-            return '-'
+            return '-';
         }
     }
 }

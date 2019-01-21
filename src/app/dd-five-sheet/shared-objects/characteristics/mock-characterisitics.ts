@@ -1,4 +1,4 @@
-import { Characteristic } from "./characteristics";
+import { Characteristic } from './characteristics';
 
 export const CHARLIST = [
     new Characteristic ('str', 14),
@@ -7,4 +7,4 @@ export const CHARLIST = [
     new Characteristic ('int', 40),
     new Characteristic ('wis', 10),
     new Characteristic ('cha', 10)
-]
+];

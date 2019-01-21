@@ -1,2 +1,8 @@
-<dd-characteristic-display *ngFor='let charac of characteristics' [characteristic]='charac'> 
-</dd-characteristic-display>
+<ul *ngFor='let charac of characteristics'>
+    <li>
+        <dd-characteristic-display [characteristic]='charac'>
+        </dd-characteristic-display>
+        <dd-value-increment [characteristic]='charac' ></dd-value-increment>
+    </li>
+
+</ul>
